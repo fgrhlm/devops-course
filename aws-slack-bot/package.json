@@ -1,0 +1,22 @@
+{
+  "name": "aws-slack-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "invokeJoke": "serverless invoke local -f jokeOfTheDay",
+    "offline": "serverless offline",
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.2.5",
+    "serverless-bundle": "^5.0.2",
+    "serverless-dotenv-plugin": "^3.10.0",
+    "serverless-offline": "^8.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.23.0"
+  }
+}

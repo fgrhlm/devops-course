@@ -1,0 +1,21 @@
+service: aws-slack-bot
+
+frameworkVersion: '2'
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  joke:
+    handler: handler.joke
+    events:
+      - sns: jokes
+      - http:
+          method: post
+          path: joke
